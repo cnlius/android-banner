@@ -28,10 +28,11 @@ publish {
     userOrg = 'liusong'//bintray.com用户名
     repoName= 'android' //仓库名
     groupId = 'com.liusong.android'//jcenter上的路径
-    artifactId = 'Banner'//项目名称
+    artifactId = 'banner'//项目名称
     publishVersion = '1.0.0'//版本号
-    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
-    website = 'https://github.com/cnlius/android-banner'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+    desc = 'a banner library for android app'//描述，不重要
+    website = 'https://github.com/cnlius/android-banner'//网站
+    licences = ['Apache-2.0']
 }
 
 
