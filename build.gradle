@@ -19,6 +19,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 
+    //防止开源发版乱码问题
     tasks.withType(Javadoc) {
         options{
             encoding "UTF-8"
