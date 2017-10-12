@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <!--轮播延迟时间-->
+        <attr name="delayTime" format="integer" />
+        <!--viewpager滚动过程持续时间-->
+        <attr name="scrollDuration" format="integer" />
+        <!--是否自动轮播-->
+        <attr name="isAutoPlay" format="boolean" />
+        <!--viewpager是否可以手动滑动-->
+        <attr name="scrollable" format="boolean" />
+        <!--banner item之间的间隔-->
+        <attr name="pageMargin" format="dimension" />
+        <!--viewpager预加载页面数-->
+        <attr name="pageLimit" format="integer" />
+        <!--左侧item显示的宽度-->
+        <attr name="leftPageWidth" format="dimension" />
+        <!--右侧item显示的宽度-->
+        <attr name="rightPageWidth" format="dimension" />
+        <!--banner为空时的站位图-->
+        <attr name="emptyImage" format="reference"/>
+    </declare-styleable>
+</resources>
