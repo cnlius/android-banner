@@ -13,12 +13,8 @@
 #### Gradle
 
 ```
-repositories {
-    maven { url 'https://jitpack.io' }
-}
-
 dependencies {
-    compile 'com.github.cnlius:banner:1.0.0'
+    compile 'com.liusong.android:banner:1.0.0'
 }
 ```
 
