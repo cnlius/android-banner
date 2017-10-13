@@ -15,7 +15,7 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
-        maven { url 'https://dl.bintray.com/liusong/android' }
+//        maven { url 'https://dl.bintray.com/liusong/android' }
     }
 
     //防止开源发版乱码问题
