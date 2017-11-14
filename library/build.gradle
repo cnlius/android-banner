@@ -26,13 +26,34 @@ dependencies {
 
 publish {
     userOrg = 'liusong'//bintray.com用户名
-    repoName= 'android' //仓库名
+    repoName = 'android' //仓库名
     groupId = 'com.liusong.android'//jcenter上的路径
     artifactId = 'banner'//项目名称
-    publishVersion = '1.0.1'//版本号
+    publishVersion = '1.0.0'//版本号
     desc = 'a banner library for android app'//描述，不重要
     website = 'https://github.com/cnlius/android-banner'//网站
     licences = ['Apache-2.0']
 }
+
+//生成jar包的任务，jar包不会包含资源文件
+//Copy类型
+task makeJar(type: Copy) {
+    //删除存在的
+    delete 'build/libs/banner.jar'
+    //设置拷贝的文件
+    from('build/intermediates/bundles/release/')
+    //打进jar包后的文件目录
+    into('build/libs/')
+    //将classes.jar放入build/libs/目录下
+    //include ,exclude参数来设置过滤
+    //（我们只关心classes.jar这个文件）
+    include('classes.jar')
+    //重命名
+    rename('classes.jar', 'banner.jar')
+}
+
+makeJar.dependsOn(build)
+//在终端执行生成JAR包
+// gradlew makeJar
 
 
