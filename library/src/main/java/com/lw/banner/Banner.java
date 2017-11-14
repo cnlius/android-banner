@@ -354,7 +354,8 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         if (onPageChangeListener != null) {
             onPageChangeListener.onPageScrollStateChanged(state);
         }
-
+        //这里只考虑currentItem是0和count+1的情况
+        //0表示最后一页，count+1表示第二页
         switch (state) {
             case 0://No operation
                 if (currentItem == 0) {
@@ -468,8 +469,9 @@ public class Banner extends FrameLayout implements ViewPager.OnPageChangeListene
         @Override
         public void run() {
             if (count > 1 && isAutoPlay) {
+                //currentItem一般不会出现count+1的情况，count+1即第二页
+                //如果出现此情况，则去延迟立即重走task，切换到第二页
                 currentItem = currentItem % (count + 1) + 1;
-//                Log.i(tag, "curr:" + currentItem + " count:" + count);
                 if (currentItem == 1) {
                     viewPager.setCurrentItem(currentItem, false);
                     handler.post(task);
